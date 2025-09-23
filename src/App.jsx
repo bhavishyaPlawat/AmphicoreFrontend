@@ -1,6 +1,7 @@
 import "./App.css";
 import Business from "./components/Business";
 import Company from "./components/company";
+import Form from "./components/Form";
 import Hero from "./components/Hero";
 import Intro from "./components/Intro";
 // import Logo from "./components/Logo";
@@ -16,6 +17,7 @@ function App() {
         <Intro />
         <Company />
         <Business />
+        <Form />
       </div>
     </>
   );

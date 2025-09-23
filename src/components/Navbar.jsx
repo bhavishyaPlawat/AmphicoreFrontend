@@ -1,10 +1,11 @@
 import React from "react";
-import PillNav from "./ui/PillNav";
+import PillNav from "@/components/ui/PillNav";
 
 function Navbar() {
   return (
-    <header className="w-full">
-      <div className="container mx-auto relative flex items-center px-6 py-2">
+    // Added classes to make the header sticky with a blurred background effect
+    <header className="w-full sticky pt-4 top-0 z-50  ">
+      <div className="container mx-auto flex items-center justify-between px-6 py-2">
         {/* Logo */}
         <div className="flex-none">
           <div className="logo">
@@ -16,8 +17,8 @@ function Navbar() {
           </div>
         </div>
 
-        {/* Centered PillNav */}
-        <div className="transform translate-x-60 -translate-y-8">
+        {/* Centered PillNav - The flex layout now handles centering */}
+        <div>
           <PillNav
             items={[
               { label: "Home", href: "#" },
@@ -35,7 +36,7 @@ function Navbar() {
         </div>
 
         {/* Get Started Button */}
-        <div className="flex-none ml-auto">
+        <div className="flex-none">
           <button className="bg-black text-white px-5 py-2.5 rounded-full hover:bg-gray-800 focus:ring-4 focus:ring-gray-300 transition-colors duration-300 font-medium">
             Get Started
           </button>

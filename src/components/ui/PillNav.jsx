@@ -237,7 +237,7 @@ const PillNav = ({
   };
 
   return (
-    <div className="absolute top-[1em] z-[1000] w-full left-0 md:w-auto md:left-auto">
+    <div className="relative z-[1000]">
       <nav
         className={`w-full md:w-max flex items-center justify-between md:justify-start box-border px-4 md:px-0 ${className}`}
         aria-label="Primary"
@@ -278,7 +278,7 @@ const PillNav = ({
 
         <div
           ref={navItemsRef}
-          className="relative items-center rounded-full hidden md:flex ml-2"
+          className="relative items-center rounded-full hidden md:flex"
           style={{
             height: "var(--nav-h)",
             background: "var(--base, #000)",

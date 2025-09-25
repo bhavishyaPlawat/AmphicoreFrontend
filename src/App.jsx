@@ -40,7 +40,7 @@ function App() {
 
   return (
     <>
-      <div className="w-screen">
+      <div className="w-full overflow-x-hidden">
         <Navbar ref={navbarRef} theme={navbarTheme} />
         <Hero />
         <div ref={introRef}>

@@ -66,11 +66,9 @@ const FooterLinkColumn = ({ title, links }) => (
             href={link.href}
             className="group text-sm relative inline-block overflow-hidden"
           >
-            {/* Original Text */}
             <span className="block transition-transform duration-300 ease-in-out group-hover:-translate-y-full text-gray-300">
               {link.name}
             </span>
-            {/* Text on Hover */}
             <span className="block absolute inset-0 transition-transform duration-300 ease-in-out translate-y-full group-hover:translate-y-0 text-yellow-400">
               {link.name}
             </span>
@@ -123,14 +121,12 @@ function Footer() {
         Footer
       </h2>
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
-        {/* Top section with logo and navigation links */}
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8 xl:col-span-1">
-            {/* Added filter-yellow-400 class for logo */}
             <img
-              src="public/logo.svg"
+              src="/logo.svg"
               alt="logo"
-              className="filter invert hue-rotate-180 brightness-75 saturate-150"
+              className="h-9 filter invert hue-rotate-180 brightness-75 saturate-150"
             />
             <p className="text-white font-semibold text-lg">
               Have questions or want to chat?
@@ -174,10 +170,12 @@ function Footer() {
           </div>
         </div>
 
-        {/* Bottom section */}
         <div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            {/* Back to top button */}
+          <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-8">
+            <p className="text-xs leading-5 text-center mt-4 md:mt-0">
+              &copy; 2025 Dayos | All rights reserved
+            </p>
+
             <button
               onClick={handleBackToTop}
               className="group flex items-center gap-2 text-sm font-medium hover:text-white transition-colors duration-300"
@@ -188,27 +186,7 @@ function Footer() {
               Back to top
             </button>
 
-            {/* Copyright */}
-            <p className="text-xs leading-5 text-center">
-              &copy; 2025 Dayos | All rights reserved
-            </p>
-
-            {/* Addresses */}
-            <div className="hidden lg:flex gap-8 text-xs">
-              <div>
-                <p>400 Concar Drive</p>
-                <p>San Mateo, CA</p>
-                <p>94402, USA</p>
-              </div>
-              <div>
-                <p>15 Beach Road,</p>
-                <p>2nd Floor</p>
-                <p>Singapore, 189677</p>
-              </div>
-            </div>
-
-            {/* Social and Legal links */}
-            <div className="flex items-center gap-x-6">
+            <div className="flex flex-col sm:flex-row items-center gap-y-4 sm:gap-x-6">
               <div className="flex gap-x-4">
                 <a href="#" className="text-gray-500 hover:text-gray-300">
                   <span className="sr-only">LinkedIn</span>
@@ -223,7 +201,7 @@ function Footer() {
                   <YoutubeIcon />
                 </a>
               </div>
-              <div className="text-xs flex flex-col items-end gap-y-1">
+              <div className="text-xs flex flex-col items-center sm:items-end gap-y-1">
                 <a href="#" className="hover:text-white">
                   Online Terms of Service
                 </a>

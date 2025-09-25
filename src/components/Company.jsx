@@ -67,7 +67,7 @@ function Company() {
       </p>
 
       {/* Grid container for the logos */}
-      <div className="mt-20 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
+      <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
         {logos.map((logo, index) => (
           <TiltedLogoCard key={index} {...logo} />
         ))}

@@ -1,5 +1,4 @@
 import React from "react";
-
 function Hero() {
   return (
     <section className="w-full min-h-screen flex items-center overflow-hidden">
@@ -14,10 +13,9 @@ function Hero() {
             AI you've been waiting for - all in one platform.
           </p>
         </div>
-
         {/* Right Column: Video */}
         <div className="video-content md:col-span-5 order-2 w-full h-full flex items-center">
-          <div className="w-[50vw] h-auto">
+          <div className="w-full md:w-[50vw] h-auto">
             <video
               className="w-full h-full object-cover"
               src="https://a.storyblok.com/f/314917/x/1fc22db7b3/1721996743-hero-latest.webm"
@@ -34,5 +32,4 @@ function Hero() {
     </section>
   );
 }
-
 export default Hero;

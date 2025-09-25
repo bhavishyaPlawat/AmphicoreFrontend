@@ -1,5 +1,4 @@
 import React from "react";
-
 function Intro() {
   return (
     // Main container: Black background, white text, significant vertical and horizontal padding,
@@ -18,7 +17,6 @@ function Intro() {
               implement securely, understand fully, or use effectively.
             </p>
           </div>
-
           {/* Column 2: GAP */}
           <div className="flex flex-col gap-4">
             <h2 className="text-5xl md:text-6xl font-bold tracking-tighter">
@@ -28,7 +26,6 @@ function Intro() {
               The Gap between technology, skills and people resources.
             </p>
           </div>
-
           {/* Column 3: CLOSED */}
           <div className="flex flex-col gap-4">
             <h2 className="text-5xl md:text-6xl font-bold tracking-tighter">
@@ -39,7 +36,6 @@ function Intro() {
             </p>
           </div>
         </div>
-
         {/* Middle section: The large, revolutionary heading. */}
         <div className="mb-24 md:mb-48">
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black leading-none tracking-tighter">
@@ -56,7 +52,6 @@ function Intro() {
             transformation journey.
           </p>
         </div>
-
         {/* "Introducing Hero" section with a two-column layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-24 md:mb-48">
           {/* Left Column: Text content */}
@@ -82,7 +77,6 @@ function Intro() {
               Book an intro
             </button>
           </div>
-
           {/* Right Column: Image */}
           <div>
             <img
@@ -92,7 +86,6 @@ function Intro() {
             />
           </div>
         </div>
-
         {/* "Supercharge your ERP" section */}
         <div className="mt-24 md:mt-48 text-left mb-24 md:mb-48">
           <div className="max-w-xl flex flex-col gap-8">
@@ -109,7 +102,6 @@ function Intro() {
             </button>
           </div>
         </div>
-
         {/* --- NEW SECTION STARTS HERE: ANSWERS, ACTIONS, EXPERTS --- */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
           {/* Card 1: ANSWERS */}
@@ -136,7 +128,6 @@ function Intro() {
               analysis.
             </p>
           </div>
-
           {/* Card 2: ACTIONS */}
           <div className="flex flex-col items-center text-center">
             {/* Video container */}
@@ -161,7 +152,6 @@ function Intro() {
               decision-making across operations.
             </p>
           </div>
-
           {/* Card 3: EXPERTS */}
           <div className="flex flex-col items-center text-center">
             {/* Video container */}
@@ -191,5 +181,4 @@ function Intro() {
     </div>
   );
 }
-
 export default Intro;

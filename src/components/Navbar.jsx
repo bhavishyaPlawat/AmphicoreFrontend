@@ -25,7 +25,7 @@ const Navbar = forwardRef(({ theme }, ref) => {
   return (
     <header
       ref={ref}
-      className={`w-full sticky top-0 z-50 transition-colors duration-300 ${navClass}`}
+      className={`w-full sticky top-4 z-50 transition-colors duration-300 ${navClass}`}
     >
       <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 py-3">
         {/* Logo */}

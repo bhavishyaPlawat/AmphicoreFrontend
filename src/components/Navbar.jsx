@@ -6,71 +6,90 @@ const Navbar = forwardRef(({ theme }, ref) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { label: "Home", href: "#" },
-    { label: "About", href: "#" },
-    { label: "Services", href: "#" },
-    { label: "Contact", href: "#" },
+    { label: "Platform", href: "#" },
+    { label: "Solutions", href: "#" },
+    { label: "Resources", href: "#" },
+    { label: "Plans", href: "#" },
+    { label: "Partnership", href: "#" },
+    { label: "Company", href: "#" },
   ];
 
   const navClass = isDark
     ? "bg-black/80 backdrop-blur-md"
     : "bg-white/80 backdrop-blur-md";
-
   const buttonClass = isDark
-    ? "bg-white text-black hover:bg-gray-200 focus:ring-gray-300"
-    : "bg-black text-white hover:bg-gray-800 focus:ring-gray-300";
-
+    ? "bg-white text-black hover:bg-gray-200"
+    : "bg-black text-white hover:bg-gray-800";
   const logoClass = isDark ? "filter invert" : "";
 
   return (
     <header
       ref={ref}
-      className={`w-full sticky top-0 pt-4 pb-4 z-50 transition-colors duration-300 ${navClass}`}
+      className={`w-full sticky top-0 z-50 transition-colors duration-300 ${navClass}`}
     >
-      <div className="container mx-auto flex items-center justify-between px-6 py-2">
+      <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 py-3">
         {/* Logo */}
-        <div className="flex-none">
-          <div className="logo">
-            <img
-              src="/logo.svg"
-              alt="logo"
-              className={`h-8 w-auto transition-all duration-300 ${logoClass}`}
-            />
-          </div>
+        <div className="flex-shrink-0">
+          <img
+            src="/logo.svg"
+            alt="Dayos logo"
+            className={`h-7 w-auto transition-all duration-300 ${logoClass}`}
+          />
         </div>
 
-        {/* Navigation (PillNav handles both desktop + mobile) */}
-        <div className="flex-1 flex justify-center">
+        {/* Desktop Navigation */}
+        <div className="hidden lg:flex flex-1 justify-center">
           <PillNav
             items={navItems}
-            className="custom-nav"
-            ease="power2.easeOut"
             baseColor={isDark ? "#ffffff" : "#000000"}
             pillColor={isDark ? "#000000" : "#ffffff"}
             hoveredPillTextColor={isDark ? "#000000" : "#ffffff"}
             pillTextColor={isDark ? "#ffffff" : "#000000"}
-            onMobileMenuClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           />
         </div>
 
-        {/* Desktop Button */}
-        <div className="hidden md:block">
-          <button
-            className={`px-5 py-2.5 rounded-full transition-colors duration-300 font-medium ${buttonClass}`}
-          >
-            Get Started
-          </button>
+        {/* Mobile Menu Toggle & Desktop Button */}
+        <div className="flex items-center gap-4">
+          <div className="hidden lg:block">
+            <button
+              className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-colors duration-300 ${buttonClass}`}
+            >
+              Get Started
+            </button>
+          </div>
+          <div className="lg:hidden">
+            <PillNav
+              items={navItems.slice(0, 1)} // Show only one item for hamburger icon
+              onMobileMenuClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              baseColor={isDark ? "#ffffff" : "#000000"}
+              pillColor={isDark ? "#000000" : "#ffffff"}
+            />
+          </div>
         </div>
       </div>
-
-      {/* Mobile Menu Extra Content */}
+      {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden px-6 pb-4 space-y-4 transition-all duration-300">
-          <button
-            className={`w-full px-5 py-2.5 rounded-full transition-colors duration-300 font-medium ${buttonClass}`}
-          >
-            Get Started
-          </button>
+        <div className="lg:hidden">
+          <div className="px-4 pb-4 space-y-2">
+            {navItems.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                className={`block px-4 text-center py-2 rounded-md text-base font-medium ${
+                  isDark
+                    ? "text-white hover:bg-gray-700"
+                    : "text-black hover:bg-gray-200"
+                }`}
+              >
+                {item.label}
+              </a>
+            ))}
+            <button
+              className={`w-full mt-2 px-5 py-2.5 rounded-full text-sm font-semibold transition-colors duration-300 ${buttonClass}`}
+            >
+              Get Started
+            </button>
+          </div>
         </div>
       )}
     </header>

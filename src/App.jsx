@@ -7,7 +7,7 @@ import Hero from "./components/Hero";
 import Intro from "./components/Intro";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import { Analytics } from "@vercel/analytics/next";
+import Analytics from "@vercel/analytics";
 
 function App() {
   const [navbarTheme, setNavbarTheme] = useState("light");

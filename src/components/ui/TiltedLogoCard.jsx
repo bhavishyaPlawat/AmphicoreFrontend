@@ -37,7 +37,7 @@ export const TiltedLogoCard = ({ imageSrc, altText, hoverBgClass }) => {
   return (
     <div
       ref={cardRef}
-      className={`relative h-[140px] w-[325px] overflow-hidden rounded-[3.2rem] transition-all duration-300 ease-out cursor-pointer ${
+      className={`relative h-[120px] w-full max-w-[300px] sm:h-[140px] sm:max-w-[325px] overflow-hidden rounded-[2.5rem] sm:rounded-[3.2rem] transition-all duration-300 ease-out cursor-pointer ${
         isHovered ? hoverBgClass : "bg-black"
       }`}
       style={{
@@ -54,7 +54,7 @@ export const TiltedLogoCard = ({ imageSrc, altText, hoverBgClass }) => {
         <img
           src={imageSrc}
           alt={altText}
-          className="h-12 w-auto max-w-full object-contain"
+          className="h-10 sm:h-12 w-auto max-w-full object-contain"
           style={{
             // 👇 KEY CHANGE IS HERE 👇
             filter: isHovered

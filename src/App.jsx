@@ -7,6 +7,7 @@ import Hero from "./components/Hero";
 import Intro from "./components/Intro";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { Analytics } from "@vercel/analytics/next";
 
 function App() {
   const [navbarTheme, setNavbarTheme] = useState("light");
@@ -53,6 +54,7 @@ function App() {
         <Form />
         <Footer />
       </div>
+      <Analytics />
     </>
   );
 }

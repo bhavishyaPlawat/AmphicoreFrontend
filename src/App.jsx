@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import "./App.css";
 import Business from "./components/Business";
-import Company from "./components/company";
+import Company from "./components/Company";
 import Form from "./components/Form";
 import Hero from "./components/Hero";
 import Intro from "./components/Intro";
